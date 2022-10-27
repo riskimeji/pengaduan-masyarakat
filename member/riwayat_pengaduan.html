@@ -1,0 +1,71 @@
+
+<html>
+    <head>
+        <title>Padang</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <style>
+        #header {
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:5px;
+        }
+        #nav {
+            line-height:30px;
+            background-color:#eee;
+            height:300px;
+            width:12%;
+            float:left;
+            padding:5px;
+        }
+        #section  {
+            width:80%;
+            float:left;
+            padding:10px;
+        }
+        #footer {
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:5px;
+        }
+        ul {
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            
+        }
+        </style>
+    </head>
+    <body>
+	    <?php
+    session_start();
+
+    if($_SESSION['level']==""){
+        header("location:index.php?pesan=gagal");
+    }
+    
+    ?>
+        <div id="header">
+            <h1>Layanan Pengaduan Masyarakat</h1>
+        </div>
+<div id="nav">
+	<ul>
+	<li><a href="../member/index.php" class="btn btn-primary">Home </a></li>
+	<li><a href="../member/mahasiswa.php" class="btn btn-primary">Forum Pengaduan </a></li>
+	<li><a href="../member/riwayat_pengaduan.html" class="btn btn-primary">Riwayat Pengaduan </a></li>
+    <li><a href="../member/logout.php" class="btn btn-primary">Log Out </a></li>
+	</ul>
+</div>
+    <div id="section">
+        <h2>Riwayat  Pengaduan</h2><br/>
+</form>
+    </div>
+    <div id="footer">
+        Padang kota tercinta, kubela dan kujaga
+    </div>
+    <script  type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script  type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    </body>
+    </html>
